@@ -24,6 +24,12 @@ exports.config = {
 
   reporters: [
     'spec',
+    ['allure', {
+      outputDir: './test/reports/allure-results/',
+      disableWebdriverStepsReporting: true,
+      disableWebdriverScreenshotsReporting: false,
+    }
+    ],
   ],
   services: ['selenium-standalone'],
 
