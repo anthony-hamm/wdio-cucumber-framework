@@ -1,0 +1,31 @@
+# OS or Editor folders
+.DS_Store
+._*
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+.jshintrc
+
+# Directories to ignore
+node_modules/
+vendor/
+coverage/
+docs/
+dist/
+tests_output/
+test/reports/allure-results/*
+package-lock.json
+
+# Files and file types to ignore
+*.log
+.env
+APIs/postman/env
