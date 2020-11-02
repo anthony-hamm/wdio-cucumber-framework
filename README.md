@@ -54,6 +54,13 @@ To execute tests on Docker use :
 
 `./docker.sh`
 
+To execute tests on mobile device use : 
+
+`npm run test:mobile`
+
+Take in mind that for mobile support you will need to add your browserStack credentials and be already subscribe to the Mobile Automation plan. 
+
+
 ### Reporters   
 
 ##### Allure
