@@ -7,6 +7,7 @@
 		"selenium-postinstall": "node_modules/.bin/selenium-standalone install",
 		"selenium-start": "node_modules/.bin/selenium-standalone start",
 		"test:local": "node node_modules/.bin/wdio ./test/config/suite.local.conf.js",
+		"test:docker": "node_modules/.bin/wdio ./test/config/suite.docker.conf.js",
 		"report:allure": "node_modules/.bin/allure generate --clean ./test/reports/allure-results && allure open"
 	},
 	"author": "Anthony Hamm",

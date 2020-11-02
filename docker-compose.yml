@@ -1,0 +1,58 @@
+# To execute this docker-compose yml file use `docker-compose -f <file_name> up`
+# Add the `-d` flag at the end for detached execution
+version: "3.7"
+services:
+
+  hamm-e2e:
+    container_name: hamm-e2e
+    image: hamm/e2e
+    depends_on:
+        - chrome
+        - firefox
+        - selenium-hub
+    command: tail -f /dev/null
+    network_mode: "host"
+    
+  selenium-hub:
+    image: selenium/hub
+    # image: selenium/hub:3.141.59-zirconium
+    container_name: selenium-hub
+    ports:
+      - 4444:4444
+    environment:
+      GRID_MAX_SESSION: 20
+      GRID_BROWSER_TIMEOUT: 300
+      GRID_TIMEOUT: 300
+    
+  chrome:
+    image: selenium/node-chrome
+    # image: selenium/node-chrome:3.141.59-zirconium
+    # container_name: chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - NODE_MAX_SESSION=5
+      - NODE_MAX_INSTANCES=5
+    deploy:
+      replicas: 2
+
+  firefox:
+    image: selenium/node-firefox
+    # image: selenium/node-firefox:3.141.59-zirconium
+    # container_name: firefox
+    volumes:
+      - /dev/shm:/dev/shm
+    depends_on:
+      - selenium-hub
+    environment:
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+    #   - NODE_MAX_SESSION=5
+    #   - NODE_MAX_INSTANCES=5
+    # deploy:
+    #   replicas: 2
+
