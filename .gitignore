@@ -8,8 +8,6 @@ Thumbs.db
 .tmproj
 *.esproj
 nbproject
-*.sublime-project
-*.sublime-workspace
 .idea
 *.iml
 .vscode
@@ -17,15 +15,9 @@ nbproject
 
 # Directories to ignore
 node_modules/
-vendor/
-coverage/
-docs/
-dist/
 tests_output/
 test/reports/allure-results/*
 package-lock.json
 
 # Files and file types to ignore
 *.log
-.env
-APIs/postman/env
