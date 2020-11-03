@@ -1,4 +1,6 @@
-## Hint: To run it easy and fast just download the repo + docker and run `./docker.sh` in the root directory xD
+## Hint: 
+To run it easy and fast just download the repo + docker and run `./docker.sh` in the root directory xD
+Use http://localhost:4444/grid/console to see the current grid status while running.
 
 
 ### Installation
@@ -52,7 +54,8 @@ To execute the entire test suite in local development, you can use the command m
 
 To execute tests on Docker use : 
 
-`./docker.sh`
+`./docker.sh
+Use http://localhost:4444/grid/console to see the current grid status while running.
 
 To execute tests on mobile device use : 
 
