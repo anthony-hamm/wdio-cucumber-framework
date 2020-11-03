@@ -42,7 +42,7 @@ class EmployeeCreate extends Page {
     super.insertText(this.leaderName,text);
   }
 
-  // insert provided text into the Entry Date dropdowns from the create new employee user page
+  // select provided date into the Entry Date dropdowns from the create new employee user page
   insertEntryDate (date) {
     // as the requirements are asking for a year that currently doesn't exist, I'm adding it manually to the html here
     browser.execute( (element) => { 
